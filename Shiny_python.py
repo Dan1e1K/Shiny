@@ -25,7 +25,7 @@ def binary_insertion_sort(arr):
         arr[j + 1] = key
 
 
-# ГЕНЕРАЦИЯ ПЛОТОВ
+# Генерация графиков
 def generate_histogram(x, y1, y2, labels):
     fig, ax = plt.subplots()
     ax.bar([1, 2], [y1, y2], tick_label=labels)  # Используем bar для гистограммы
@@ -39,6 +39,7 @@ def generate_histogram(x, y1, y2, labels):
     plt.close(fig)
     return tmpfile.name
 
+#находим свободный порт
 def find_free_port():
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         s.bind(('', 0))
